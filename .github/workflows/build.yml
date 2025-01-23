@@ -10,8 +10,10 @@ jobs:
   CreatTag:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - if: env.ENV == 1
+      uses: actions/checkout@v4
     - name: Create a new tag
+      if:env.ENV == 1
       run: |
         TAG_NAME="nightly"
         git tag $TAG_NAME
@@ -23,7 +25,7 @@ jobs:
     - name: HELP
       run: |
         mkdir .zig && cd .zig
-        curl -o zig.tar.xz "https://ziglang.org/builds/zig-linux-x86_64-0.14.0-dev.2851+b074fb7dd.tar.xz"
+        curl -o zig.tar.xz "https://ziglang.org/builds/zig-linux-x86_64-0.14.0-dev.2847+db8ed730e.tar.xz"
         tar -xf zig.tar.xz && rm zig.tar.xz
         mv * zig && cd zig && export PATH=$PATH:$PWD
         cd ../..
@@ -40,7 +42,7 @@ jobs:
     - name: Build
       run: |
         mkdir .zig && cd .zig
-        curl -o zig.tar.xz "https://ziglang.org/builds/zig-linux-x86_64-0.14.0-dev.2851+b074fb7dd.tar.xz"
+        curl -o zig.tar.xz "https://ziglang.org/builds/zig-linux-x86_64-0.14.0-dev.2847+db8ed730e.tar.xz"
         tar -xf zig.tar.xz && rm zig.tar.xz
         mv * zig && cd zig && export PATH=$PATH:$PWD
         cd ../..
@@ -77,7 +79,7 @@ jobs:
     - name: Build
       run: |
         mkdir .zig && cd .zig
-        curl -o zig.tar.xz "https://ziglang.org/builds/zig-linux-x86_64-0.14.0-dev.2851+b074fb7dd.tar.xz"
+        curl -o zig.tar.xz "https://ziglang.org/builds/zig-linux-x86_64-0.14.0-dev.2847+db8ed730e.tar.xz"
         tar -xf zig.tar.xz && rm zig.tar.xz
         mv * zig && cd zig && export PATH=$PATH:$PWD
         cd ../..
@@ -118,7 +120,7 @@ jobs:
     - name: Build
       run: |
         mkdir .zig && cd .zig
-        curl -o zig.tar.xz "https://ziglang.org/builds/zig-linux-x86_64-0.14.0-dev.2851+b074fb7dd.tar.xz"
+        curl -o zig.tar.xz "https://ziglang.org/builds/zig-linux-x86_64-0.14.0-dev.2847+db8ed730e.tar.xz"
         tar -xf zig.tar.xz && rm zig.tar.xz
         mv * zig && cd zig && export PATH=$PATH:$PWD
         cd ../..
@@ -155,7 +157,7 @@ jobs:
     - name: Build
       run: |
         mkdir .zig && cd .zig
-        curl -o zig.tar.xz "https://ziglang.org/builds/zig-linux-x86_64-0.14.0-dev.2851+b074fb7dd.tar.xz"
+        curl -o zig.tar.xz "https://ziglang.org/builds/zig-linux-x86_64-0.14.0-dev.2847+db8ed730e.tar.xz"
         tar -xf zig.tar.xz && rm zig.tar.xz
         mv * zig && cd zig && export PATH=$PATH:$PWD
         cd ../..
