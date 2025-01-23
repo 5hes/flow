@@ -50,9 +50,9 @@ jobs:
     - name: Pack output
       run: |
         mv zig-out nightly
-        7z a kryo_fast.7z nightly
-        tar -cJf kryo_fast.tar.xz nightly
-        tar -cf kryo_fast.tar nightly
+        7z a kryo_fast.7z nightly/bin/flow
+        tar -cJf kryo_fast.tar.xz nightly/bin/flow
+        tar -cf kryo_fast.tar nightly/bin/flow
     - name: Release
       uses: softprops/action-gh-release@v2
       with:
@@ -64,8 +64,8 @@ jobs:
           kryo_fast.7z
     - name: Check zig binary size
       run: |
-        ls -lh nightly/
-        ls -l nightly/
+        ls -lh nightly/bin
+        ls -l nightly/bin
         
   kryo_Small:
     runs-on: ubuntu-latest
@@ -87,9 +87,9 @@ jobs:
     - name: Pack output
       run: |
         mv zig-out nightly
-        7z a kryo_small.7z nightly
-        tar -cJf kryo_small.tar.xz nightly
-        tar -cf kryo_small.tar nightly
+        7z a kryo_small.7z nightly/bin/flow
+        tar -cJf kryo_small.tar.xz nightly/bin/flow
+        tar -cf kryo_small.tar nightly/bin/flow
     - name: Release
       uses: softprops/action-gh-release@v2
       with:
@@ -101,8 +101,8 @@ jobs:
           kryo_small.7z
     - name: Check zig binary size
       run: |
-        ls -lh nightly/
-        ls -l nightly/
+        ls -lh nightly/bin/
+        ls -l nightly/bin/
 
 
 
@@ -128,9 +128,9 @@ jobs:
     - name: Pack output
       run: |
         mv zig-out nightly
-        7z a x1c_fast.7z nightly
-        tar -cJf x1c_fast.tar.xz nightly
-        tar -cf x1c_fast.tar nightly
+        7z a x1c_fast.7z nightly/bin/flow
+        tar -cJf x1c_fast.tar.xz nightly/bin/flow
+        tar -cf x1c_fast.tar nightly/bin/flow
     - name: Release
       uses: softprops/action-gh-release@v2
       with:
@@ -142,8 +142,8 @@ jobs:
           x1c_fast.7z
     - name: Check zig binary size
       run: |
-        ls -lh nightly/
-        ls -l nightly/
+        ls -lh nightly/bin/
+        ls -l nightly/bin/
         
   x1c_Small:
     runs-on: ubuntu-latest
@@ -165,9 +165,9 @@ jobs:
     - name: Pack output
       run: |
         mv zig-out nightly
-        7z a x1c_small.7z nightly
-        tar -cJf x1c_small.tar.xz nightly
-        tar -cf x1c_small.tar nightly
+        7z a x1c_small.7z nightly/bin/flow
+        tar -cJf x1c_small.tar.xz nightly/bin/flow
+        tar -cf x1c_small.tar nightly/bin/flow
     - name: Release
       uses: softprops/action-gh-release@v2
       with:
@@ -179,8 +179,8 @@ jobs:
           x1c_small.7z
     - name: Check zig binary size
       run: |
-        ls -lh nightly/
-        ls -l nightly/
+        ls -lh nightly/bin/
+        ls -l nightly/bin/
 
 
 
@@ -206,9 +206,9 @@ jobs:
     - name: Pack output
       run: |
         mv zig-out nightly
-        7z a baseline_fast.7z nightly
-        tar -cJf baseline_fast.tar.xz nightly
-        tar -cf baseline_fast.tar nightly
+        7z a baseline_fast.7z nightly/bin/flow
+        tar -cJf baseline_fast.tar.xz nightly/bin/flow
+        tar -cf baseline_fast.tar nightly/bin/flow
     - name: Release
       uses: softprops/action-gh-release@v2
       with:
@@ -220,8 +220,8 @@ jobs:
           x1c_fast.7z
     - name: Check zig binary size
       run: |
-        ls -lh nightly/
-        ls -l nightly/
+        ls -lh nightly/bin/
+        ls -l nightly/bin/
         
   baseline_Small:
     runs-on: ubuntu-latest
@@ -243,9 +243,9 @@ jobs:
     - name: Pack output
       run: |
         mv zig-out nightly
-        7z a baseline_small.7z nightly
-        tar -cJf baseline_small.tar.xz nightly
-        tar -cf baseline_small.tar nightly
+        7z a baseline_small.7z nightly/bin/flow
+        tar -cJf baseline_small.tar.xz nightly/bin/flow
+        tar -cf baseline_small.tar nightly/bin/flow
     - name: Release
       uses: softprops/action-gh-release@v2
       with:
@@ -257,5 +257,5 @@ jobs:
           baseline_small.7z
     - name: Check zig binary size
       run: |
-        ls -lh nightly/
-        ls -l nightly/
+        ls -lh nightly/bin/
+        ls -l nightly/bin/
