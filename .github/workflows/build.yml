@@ -13,7 +13,7 @@ jobs:
     - if: env.ENV == 1
       uses: actions/checkout@v4
     - name: Create a new tag
-      if:env.ENV == 1
+      if: env.ENV == 1
       run: |
         TAG_NAME="nightly"
         git tag $TAG_NAME
